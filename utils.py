@@ -13,7 +13,7 @@ from langchain.chains.question_answering import load_qa_chain
 from langchain.llms import OpenAI
 
 # environment variables
-os.environ['OPENAI_API_KEY']=''
+os.environ['OPENAI_API_KEY']=st.secrets["database"]["OPENAI_API_KEY"]
 os.environ['LANGCHAIN_HANDLER']='langchain'
 
 openai.api_key=os.environ['OPENAI_API_KEY']
